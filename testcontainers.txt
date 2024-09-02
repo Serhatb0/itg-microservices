@@ -1,0 +1,30 @@
+Testcontainers, basitçe anlatmak gerekirse, yazılım geliştirirken testlerimizi daha gerçekçi ortamlarda yapmamızı sağlayan bir araçtır. Bu araç, testler için gerekli olan veritabanı, mesaj kuyrukları veya diğer servisleri Docker konteynerlerinde çalıştırarak bize yardımcı olur. Şimdi adım adım ne olduğunu ve nasıl çalıştığını açıklayayım:
+
+1. Docker Nedir?
+Docker, yazılım uygulamalarını "konteyner" adı verilen küçük, izole edilmiş ortamlar içinde çalıştırmamızı sağlar. Bu konteynerler, yazılımın çalışması için gereken her şeyi (kütüphaneler, bağımlılıklar, dosyalar vb.) içerir.
+Docker konteynerleri, uygulamalarımızın her yerde aynı şekilde çalışmasını sağlar, çünkü her şey konteynerin içinde tanımlıdır.
+
+
+
+2. Testcontainers Nedir?
+Testcontainers, yazılım testlerimizi Docker konteynerleri içinde çalıştırmamızı sağlayan bir Java kütüphanesidir.
+Bu kütüphane, testler sırasında ihtiyaç duyduğumuz veritabanı, mesajlaşma sistemi (mesela Kafka) gibi bağımlılıkları otomatik olarak bir Docker konteyneri içinde başlatır.
+
+
+
+3. Neden Testcontainers Kullanırız?
+Testlerinizi daha güvenilir ve gerçekçi hale getirmek için kullanırsınız. Örneğin, uygulamanız bir veritabanı kullanıyorsa, test sırasında aynı veritabanını konteyner içinde çalıştırarak test edebilirsiniz.
+Test ortamını hızlıca kurup kaldırabilirsiniz. Docker sayesinde, testler bittiğinde konteynerleri kapatır ve sistemi temizlersiniz.
+Bağımlılık sorunları yaşamazsınız. Her şey Docker konteynerinin içinde tanımlı olduğu için, sisteminizde bir şeylerin eksik olma ihtimali azalır.
+
+
+
+
+
+Rest-Assured, RESTful web servislerinin test edilmesi için kullanılan bir Java kütüphanesidir. Bu kütüphane, API'lerinizi test etmek ve doğrulamak için yazılım testi yazarken oldukça kullanışlıdır. Rest-Assured sayesinde HTTP istekleri yapabilir, yanıtları doğrulayabilir ve test senaryolarınızı daha basit bir şekilde yazabilirsiniz.
+
+Temel Özellikleri:
+HTTP İstekleri Yapma: Rest-Assured ile GET, POST, PUT, DELETE gibi HTTP isteklerini kolayca yapabilirsiniz.
+Yanıt Doğrulama: Yanıtların durum kodları, içerikleri ve başlıkları gibi çeşitli özelliklerini doğrulamak için kullanabilirsiniz.
+Kolay Kullanım: REST API'lerini test ederken, Rest-Assured kütüphanesi, HTTP istekleri ve yanıtları ile ilgili işlemleri daha okunabilir ve basit bir şekilde yazmanıza olanak tanır.
+Desteği Artan API Test Özellikleri: JSON ve XML yanıtlarını analiz edebilir, ayrıca doğrulama ve ön koşulları da yönetebilirsiniz.

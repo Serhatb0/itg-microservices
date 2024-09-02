@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres:14.5
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=itg
+      - POSTGRES_PASSWORD=itg
+      - PGDATA=/var/lib/postgresql/data
+      - POSTGRES_DB=itg
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+
+volumes:
+  postgres_data:
