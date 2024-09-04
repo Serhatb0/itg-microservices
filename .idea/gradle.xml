@@ -4,6 +4,14 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/api-gateway" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/config-server" />
         <option name="modules">
           <set>
@@ -24,6 +32,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/product-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/shopping-cart-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/shopping-cart-service" />
           </set>
         </option>
       </GradleProjectSettings>

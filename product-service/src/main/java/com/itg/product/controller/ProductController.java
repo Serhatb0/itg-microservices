@@ -6,13 +6,12 @@ import com.itg.product.model.Product;
 import com.itg.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/product")
+@RequestMapping("/product")
 @RequiredArgsConstructor
 public class ProductController {
 
@@ -30,9 +29,9 @@ public class ProductController {
         return productService.getAllProducts();
     }
 
-    @GetMapping("/findBy")
+    @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public ProductResponse findProductById(@RequestParam("id") Long id){
+    public ProductResponse findProductById(@PathVariable Long id){
         return productService.findProductById(id);
     }
 

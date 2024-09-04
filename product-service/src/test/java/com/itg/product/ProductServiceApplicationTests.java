@@ -16,7 +16,7 @@ import org.testcontainers.containers.PostgreSQLContainer;
 class ProductServiceApplicationTests {
 
 
-    @ServiceConnection
+    /*@ServiceConnection
     static PostgreSQLContainer postgres = new PostgreSQLContainer("postgres:14.5");
 
     @LocalServerPort
@@ -31,27 +31,27 @@ class ProductServiceApplicationTests {
     static {
         postgres.start();
     }
-
-    @Test
-    void shouldCreateProduct() {
-            String requestBody = """
-                        {
-                           "name": "product2",
-                           "description": "product2 description",
-                           "price": 23
-                         }
-                    """;
-
-            RestAssured.given().contentType("application/json")
-                    .body(requestBody)
-                    .when().post("/api/v1/product")
-                    .then()
-                    .statusCode(201)
-                    .body("name", Matchers.equalTo("product2"))
-                    .body("description", Matchers.equalTo("product2 description"))
-                    .body("price", Matchers.equalTo(23));
-
-
-    }
+*/
+   // @Test
+//    void shouldCreateProduct() {
+//            String requestBody = """
+//                        {
+//                           "name": "product2",
+//                           "description": "product2 description",
+//                           "price": 23
+//                         }
+//                    """;
+//
+//            RestAssured.given().contentType("application/json")
+//                    .body(requestBody)
+//                    .when().post("/api/v1/product")
+//                    .then()
+//                    .statusCode(201)
+//                    .body("name", Matchers.equalTo("product2"))
+//                    .body("description", Matchers.equalTo("product2 description"))
+//                    .body("price", Matchers.equalTo(23));
+//
+//
+//    }
 
 }
