@@ -36,10 +36,26 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/rabbitmq" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/rabbitmq" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/shopping-cart-service" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/shopping-cart-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/web-ornek" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/web-ornek" />
           </set>
         </option>
       </GradleProjectSettings>

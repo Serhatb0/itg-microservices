@@ -13,14 +13,14 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("api/shopping-cart")
+@RequestMapping("shopping-cart-fc")
 public class ShoppingCartController {
 
 
     @Autowired
     ShoppingCartService shoppingCartService;
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<ShoppingCart> create(@RequestParam("name") String name) {
         return shoppingCartService.create(name);
     }
@@ -36,6 +36,12 @@ public class ShoppingCartController {
     public ResponseEntity<Map<String, String>> getShoppingCartPrice(
             @PathVariable("id") Long shoppingCartId) {
         return shoppingCartService.getShoppingCartPrice(shoppingCartId);
+    }
+
+    @GetMapping("findById/{id}")
+    public ResponseEntity<ShoppingCart> getShoppingCartFindById(
+            @PathVariable("id") Long shoppingCartId) {
+        return ResponseEntity.ok(shoppingCartService.getShoppingCartFindById(shoppingCartId));
     }
 
 }

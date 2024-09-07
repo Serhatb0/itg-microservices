@@ -63,4 +63,8 @@ public class ShoppingCartService {
         response.put("Total Price", Double.toString(totalPrice));
         return ResponseEntity.ok().body(response);
     }
+
+    public ShoppingCart getShoppingCartFindById(Long shoppingCartId) {
+        return shoppingCartRepository.findById(shoppingCartId).orElseThrow(() -> new RuntimeException("Verilen id ile eşleşen bir sonuç bulunamadı"));
+    }
 }
