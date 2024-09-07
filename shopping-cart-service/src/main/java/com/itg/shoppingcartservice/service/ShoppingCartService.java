@@ -50,17 +50,17 @@ public class ShoppingCartService {
                         .findById(shoppingCartId)
                         .orElseThrow(() -> new RuntimeException("Verilen id ile eşleşen bir sonuç bulunamadı"));
 
-        int totalPrice =
+        double totalPrice =
                 shoppingCart.getProducts().stream()
                         .map(
                                 product ->
                                         restTemplate.getForObject(
                                                 "http://PRODUCT-SERVICE/product/" + product.getId(), HashMap.class))
-                        .mapToInt(productResponse -> (int) productResponse.get("price"))
+                        .mapToDouble(productResponse -> (double) productResponse.get("price"))
                         .sum();
 
         // ["Total Price":33];
-        response.put("Total Price", Integer.toString(totalPrice));
+        response.put("Total Price", Double.toString(totalPrice));
         return ResponseEntity.ok().body(response);
     }
 }
