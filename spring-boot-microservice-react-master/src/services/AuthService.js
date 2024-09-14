@@ -25,11 +25,6 @@ class AuthService {
             username,
             email,
             password,
-        }, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            withCredentials: true  // Include if needed by backend
         });
     }
 }
