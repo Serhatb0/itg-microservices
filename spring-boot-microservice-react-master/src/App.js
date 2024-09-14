@@ -19,7 +19,7 @@ import ProductsListComponent from "./components/ProductsListComponent";
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
-import { history } from './helpers/history';
+//import { history } from './helpers/history';
 
 import AuthVerify from "./common/AuthVerify";
 import EventBus from "./common/EventBus";
@@ -37,9 +37,9 @@ class App extends Component {
       currentUser: undefined,
     };
 
-    history.listen((location) => {
+    /*history.listen((location) => {
       props.dispatch(clearMessage()); // clear message when changing location
-    });
+    });*/
   }
 
   componentDidMount() {
