@@ -21,10 +21,15 @@ class AuthService {
     }
 
     register(username, email, password) {
-        return axios.post("user/signup", {
+        return axios.post("http://localhost:8766/api/user/signup", {
             username,
             email,
             password,
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            withCredentials: true  // Include if needed by backend
         });
     }
 }
