@@ -1,0 +1,16 @@
+jwt:
+  auth:
+    converter:
+      principle-attribute: preferred_username
+      resource-id: spring-boot-itg-client1
+server:
+  port: 8081
+spring:
+  application:
+    name: spring-boot-keycloak-itg
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/SpringBootKecloakItgProject
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
