@@ -41,7 +41,7 @@ public class UserController {
         return userService.authenticateUser(loginRequest);
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin
     @PostMapping("/signup")
     @Operation(summary = "Create authenticated users", description = "Create Authenticated user with username, email and password")
     @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "User registered successfully!"),
