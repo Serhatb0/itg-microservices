@@ -1,0 +1,41 @@
+
+  version: '3.8'
+
+  services:
+    postgres:
+      container_name: kc_db
+      image: postgres:15
+      ports:
+        - "5433:5433"
+      environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: 1234
+      volumes:
+        - kc-db:/var/lib/postgressql/data
+
+    keycloak:
+      container_name: kc_current
+      image: quay.io/keycloak/keycloak:23.0.6
+      command: start-dev
+      environment:
+        DB_VENDOR: postgres
+        DB_ADDR: postgres
+        DB_PORT: "5433"
+        DB_DATABASE: keycloak
+        DB_USER: postgres
+        DB_PASSWORD: 1234
+        KEYCLOAK_ADMIN: admin
+        KEYCLOAK_ADMIN_PASSWORD: admin
+      ports:
+        - "8080:8080"
+      depends_on:
+        - postgres
+
+  volumes:
+    kc-db:
+    kc-db-all:
+
+
+
+
+
