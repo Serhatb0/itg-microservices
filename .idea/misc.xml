@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/api-gateway" />
     <file type="web" url="file://$PROJECT_DIR$/config-server" />
     <file type="web" url="file://$PROJECT_DIR$/discovery-server" />
+    <file type="web" url="file://$PROJECT_DIR$/itg-exception" />
     <file type="web" url="file://$PROJECT_DIR$/itg-keycloak" />
     <file type="web" url="file://$PROJECT_DIR$/product-service" />
     <file type="web" url="file://$PROJECT_DIR$/rabbitmq" />

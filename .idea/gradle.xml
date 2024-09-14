@@ -28,6 +28,14 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/itg-exception" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/itg-exception" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/itg-keycloak" />
         <option name="modules">
           <set>
