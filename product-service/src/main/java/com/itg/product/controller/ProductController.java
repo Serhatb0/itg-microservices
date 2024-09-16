@@ -13,28 +13,29 @@ import java.util.List;
 @RestController
 @RequestMapping("/product")
 @RequiredArgsConstructor
+@CrossOrigin
 public class ProductController {
 
     private final ProductService productService;
-
+    @CrossOrigin
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Product createProduct(@RequestBody ProductRequest productRequest){
        return productService.createProduct(productRequest);
     }
-
+    @CrossOrigin
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<ProductResponse> getAllProducts(){
         return productService.getAllProducts();
     }
-
+    @CrossOrigin
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ProductResponse findProductById(@PathVariable Long id){
         return productService.findProductById(id);
     }
-
+    @CrossOrigin
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public  void deleteProduct(@PathVariable Long id){
